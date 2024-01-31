@@ -1,0 +1,29 @@
+
+div{
+    font-size:150%;
+    margin: 0 auto;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+li button {
+    font-size: 8px;
+    margin-left: 20px;
+    color: #666;
+}
+
+*{
+    font-size: 125%;
+}
+
+body{
+    margin: 0 auto;
+    max-width:80%;
+    background-color: #e0e0e0;
+}
+h1{
+    font-size:200%;
+    color:dodgerblue
+}

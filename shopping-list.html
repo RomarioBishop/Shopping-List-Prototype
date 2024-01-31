@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shopping list example</title>
+
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button>Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script defer>
+
+      const uList = document.querySelector("ul");
+      const button = document.querySelector("button");
+      const input = document.querySelector("input");
+
+      button.addEventListener('click',shoppingf);
+
+      function shoppingf(){
+        if (input.value === "" ){
+          return alert("Please enter something first");
+        }
+        const text = input.value;
+        input.value = "";
+
+        const nList = document.createElement("li")
+        const span = document.createElement("span");
+        const dButton = document.createElement("button");
+        const horizontal = document.createElement("hr");
+        
+
+
+        nList.appendChild(span);
+        span.textContent = text;
+        span.style.color = "orange";
+        nList.appendChild(dButton);
+        dButton.setAttribute("style", "font-size:1.1rem");
+        dButton.textContent= "Delete";
+        uList.appendChild(nList);
+        uList.append(horizontal)
+
+        dButton.addEventListener('click', () => {
+            uList.removeChild(nList);
+        });
+
+        input.focus();
+      }
+
+
+
+    </script>
+  </body>
+</html>
